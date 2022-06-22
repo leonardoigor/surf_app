@@ -20,12 +20,15 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["./src/*"],
-      "@test/*": ["./test/*"]
+      "@test/*": ["./test/*"],
+      "*": ["./src/utils/types/*.d.ts"]
     },
     "rootDirs": ["./src", "./test"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
+  "typeRoots": ["./src/utils/types/custom.d.ts"],
+
   "include": ["./src/**/*.ts", "./test/**/*.ts"],
   "exclude": ["./node_modules/*", "dist"]
 }
