@@ -13,6 +13,7 @@
     "api"
   ],
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.3",
     "@types/module-alias": "^2.0.1",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "@overnightjs/core": "^1.7.6",
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "module-alias": "^2.2.2"
   },
@@ -37,8 +39,9 @@
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test:f": "jest --projects ./test --coverage --runInBand",
+    "test:u": "jest --coverage",
+    "test:u:a": "jest --coverage --watch",
     "dev": "ts-node-dev ./src/index.ts"
   }
 }
